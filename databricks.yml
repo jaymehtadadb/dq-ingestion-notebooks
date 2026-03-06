@@ -17,9 +17,15 @@ targets:
     default: true
     mode: development
     workspace:
-      profile: DEFAULT
+      profile: anil-workspace
 
   prod:
     mode: production
     workspace:
-      profile: DEFAULT
+      profile: e2-demo-west
+      root_path: /Workspace/Users/jay.mehta@databricks.com/.bundle/${bundle.name}/${bundle.target}
+    resources:
+      jobs:
+        DABs_Demo:
+          trigger:
+            pause_status: PAUSED

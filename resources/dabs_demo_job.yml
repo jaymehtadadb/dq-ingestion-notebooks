@@ -19,6 +19,11 @@ resources:
           notebook_task:
             notebook_path: data_ingestion_viewership
             source: GIT
+      trigger:
+        pause_status: UNPAUSED
+        periodic:
+          interval: 1
+          unit: HOURS
       git_source:
         git_url: https://github.com/jaymehtadadb/dq-ingestion-notebooks.git
         git_provider: gitHub
